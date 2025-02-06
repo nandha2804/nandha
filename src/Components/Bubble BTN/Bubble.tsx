@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Bubble.css";
 import { motion } from "framer-motion";
-import { resume } from "../../Assets";
 const Bubble = () => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {

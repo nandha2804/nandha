@@ -44,7 +44,7 @@ const django =
 const docker =
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg";
 
-import resume from "./Resume.pdf";
+
 
 import portfolioReact from "./portfolio-react.png";
 import portfolioAngular from "./portfolioAngular.png";
@@ -66,7 +66,6 @@ export {
   portfolioReact,
   questTracler,
   treasureHunt,
-  resume,
   pc,
   logo,
   backend,
