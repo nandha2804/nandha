@@ -46,15 +46,15 @@ const docker =
 
 
 
-import portfolioReact from "./portfolio-react.png";
+import portfolioReact from "./SMA.png";
 import portfolioAngular from "./portfolioAngular.png";
-import questTracler from "./questtracker.png";
+import questTracler from "./android.png";
 import treasureHunt from "./treasurehunt.png";
 import math from "./math.png";
-import hotel from "./hotel.png";
-import propertyHub from "./propertyHub.png";
-import eCommerce from "./eCommerce.png";
-import enquiryHub from "./enquiryHub.png";
+import hotel from "./VPMS.png";
+import propertyHub from "./WAF.png";
+import eCommerce from "./amiso.png";
+import enquiryHub from "./MDS.jpg";
 
 export {
   propertyHub,

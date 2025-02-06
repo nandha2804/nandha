@@ -219,12 +219,12 @@ const experiences = [
 
 const projects = [
   {
-    name: "Property Hub",
+    name: "Web Application Firewall🔐🌐",
     description:
-      "The Property Hub is an innovative online platform designed to revolutionize the way individuals and businesses engage with the real estate market. It serves as a comprehensive hub for all property-related needs, offering a wide range of features and services to simplify the process of buying, selling, renting, and managing properties.",
+      "A WAF or web application firewall helps protect web applications by filtering and monitoring HTTP traffic between a web application and the Internet. It typically protects web applications from attacks such as cross-site forgery, cross-site-scripting (XSS), file inclusion, and SQL injection, among others.",
     tags: [
       {
-        name: "react",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
@@ -232,7 +232,7 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "django",
+        name: "Flask",
         color: "green-text-gradient",
       },
     ],
@@ -240,12 +240,12 @@ const projects = [
     source_code_link: "https://github.com/nandha2804",
   },
   {
-    name: "Enquiry Hub",
+    name: "Medical Diagnosis System🏥",
     description:
-      "The Enquiry Hub is an innovative solution aimed at enhancing customer inquiry management and support systems for businesses. It is designed to streamline the process of handling customer queries, improving response times, and ultimately enhancing customer satisfaction.",
+      "A'Medical Diagnosis System' project aims to develop a utilizes patient data like symptoms, medical history,test results to analyze and suggest potential diagnoses, assisting healthcare professionals in faster and more accurate, often leveraging machine learning algorithms to identify patterns within large datasets.",
     tags: [
       {
-        name: "react",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
@@ -261,9 +261,9 @@ const projects = [
     source_code_link: "https://github.com/nandha2804",
   },
   {
-    name: "E-Commerce",
+    name: "Amiso🧼",
     description:
-      "Emporio is an e-commerce website development project aimed at creating an online fashion store that offers a wide range of trendy clothing, footwear, and accessories for men and women. The project aims to provide an intuitive and user-friendly platform for customers to browse, select, and purchase fashionable items from the comfort of their homes.",
+      "This is a professional cleaning service website with a modern,The site uses a responsive grid layout that shows content in single column on mobile and three columns on larger screens, ensuring good user experience across all devices.",
     tags: [
       {
         name: "react",
@@ -274,7 +274,7 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "django",
+        name: "typescript",
         color: "green-text-gradient",
       },
     ],
@@ -283,16 +283,16 @@ const projects = [
       "https://github.com/nandha2804",
   },
   {
-    name: "PortFolio-React",
+    name: "Speech Emotion Recognition🎙️😊",
     description:
-      "Portfolio website with track of my career journey, projects, open-source contribution and much more.",
+      "Speech Emotion Recognition (SER) is a technology that uses artificial intelligence to identify human emotions from spoken words, analyzing vocal cues like pitch, tone, and volume to classify emotions like happiness, sadness, anger, or fear.",
     tags: [
       {
-        name: "react",
+        name: "Flask",
         color: "blue-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Python",
         color: "pink-text-gradient",
       },
       {
@@ -305,16 +305,16 @@ const projects = [
   },
 
   {
-    name: "Quest Tracker",
+    name: "InstiGo Android Application📱",
     description:
-      "The Quest Tracker is a web application that helps users keep track of their tasks and goals. It is designed to be user-friendly and customizable, with the ability to create, edit, and delete tasks. The application also allows users to track their progress and view completed tasks.",
+      "InstiGo Android Application is a mobile app designed to streamline student and faculty interactions within an institute. It provides features like attendance tracking, event updates, academic resources, and communication tools. Users can access schedules, submit assignments, and receive notifications for important announcements.",
     tags: [
       {
-        name: "python",
+        name: "Androin",
         color: "blue-text-gradient",
       },
       {
-        name: "django",
+        name: "Java",
         color: "green-text-gradient",
       },
       {
@@ -327,16 +327,16 @@ const projects = [
   },
 
   {
-    name: "Hotel Reservation",
+    name: "Vehicle Parking Management System🚗",
     description:
-      "The Hotel Reservation System is a web application that allows customers to book and manage hotel reservations online. Customers can search for available hotels and rooms, view hotel amenities and details, and make online reservations. The application also includes a backend system for hotel administrators to manage hotel information, room availability, and reservations.",
+      "A Vehicle Parking Management System is designed to efficiently manage parking spaces, track vehicle entries and exits, and enhance security. It automates the parking process using QR codes, RFID. The system includes features like real-time parking availability, user authentication, payment processing, and reporting.",
     tags: [
       {
-        name: "react",
+        name: "PHP",
         color: "blue-text-gradient",
       },
       {
-        name: "django",
+        name: "Tailwind CSS",
         color: "green-text-gradient",
       },
       {
@@ -348,69 +348,69 @@ const projects = [
     source_code_link:
       "https://github.com/nandha2804",
   },
-  {
-    name: "Math Flash Cards",
-    description:
-      "The Math Flash Cards is a web application that helps students practice and improve their math skills. The application generates random math problems based on the user's chosen difficulty level and provides instant feedback on whether the user's answers are correct or incorrect. The application also includes a leaderboard that displays the top scores of all users.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tkinter",
-        color: "green-text-gradient",
-      },
-      {
-        name: "canva",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: math,
-    source_code_link: "https://github.com/nandha2804",
-  },
-  {
-    name: "PortFolio-Angular",
-    description:
-      "Portfolio website with track of my career journey, projects, open-source contribution and much more.",
-    tags: [
-      {
-        name: "angular",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "bootstrap",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: portfolioAngular,
-    source_code_link: "https://github.com/nandha2804",
-  },
-  {
-    name: "The Treasure Hunt",
-    description:
-      "The Treasure Hunt is an endless runner game developed in Unity where the player controls a character running through an infinite environment, collecting coins and avoiding obstacles. The game includes power-ups and upgrades that the player can collect to improve their score and increase their chances of survival.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tkinter",
-        color: "green-text-gradient",
-      },
-      {
-        name: "canva",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: treasureHunt,
-    source_code_link: "https://github.com/nandha2804",
-  },
+  // {
+  //   name: "Math Flash Cards",
+  //   description:
+  //     "The Math Flash Cards is a web application that helps students practice and improve their math skills. The application generates random math problems based on the user's chosen difficulty level and provides instant feedback on whether the user's answers are correct or incorrect. The application also includes a leaderboard that displays the top scores of all users.",
+  //   tags: [
+  //     {
+  //       name: "python",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "tkinter",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "canva",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: math,
+  //   source_code_link: "https://github.com/nandha2804",
+  // },
+  // {
+  //   name: "PortFolio-Angular",
+  //   description:
+  //     "Portfolio website with track of my career journey, projects, open-source contribution and much more.",
+  //   tags: [
+  //     {
+  //       name: "angular",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "bootstrap",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "css",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: portfolioAngular,
+  //   source_code_link: "https://github.com/nandha2804",
+  // },
+  // {
+  //   name: "The Treasure Hunt",
+  //   description:
+  //     "The Treasure Hunt is an endless runner game developed in Unity where the player controls a character running through an infinite environment, collecting coins and avoiding obstacles. The game includes power-ups and upgrades that the player can collect to improve their score and increase their chances of survival.",
+  //   tags: [
+  //     {
+  //       name: "python",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "tkinter",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "canva",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: treasureHunt,
+  //   source_code_link: "https://github.com/nandha2804",
+  // },
 ];
 
 export { services, technologies, experiences, projects };
