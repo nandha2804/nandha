@@ -80,7 +80,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "AI/ML Engineer",
+    title: "Full Stack Developer",
     icon: aiml,
   },
   {
