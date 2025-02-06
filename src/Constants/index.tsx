@@ -7,12 +7,12 @@ import {
   html,
   css,
   reactjs,
-  nodejs,
+  Angular,
   github,
   aws,
   django,
   mysql,
-  mongodb,
+  postgresql,
   git,
   figma,
   python,
@@ -20,7 +20,7 @@ import {
   intellecto,
   infox,
   active,
-  portfolioNodejs,
+  portfolioAngular,
   portfolioReact,
   questTracler,
   treasureHunt,
@@ -30,6 +30,7 @@ import {
   enquiryHub,
   eCommerce,
   docker,
+  angular,
 } from "../Assets";
 
 export const navLinks = [
@@ -118,8 +119,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Nodejs",
-    icon: nodejs,
+    name: "angular",
+    icon: angular,
   },
 
   {
@@ -127,8 +128,8 @@ const technologies = [
     icon: mysql,
   },
   {
-    name: "mongoDB",
-    icon: mongodb,
+    name: "postgresql",
+    icon: postgresql,
   },
   {
     name: "AWS",
@@ -154,59 +155,66 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Python Developer",
-    company_name: "Tech Active Solutions (India) Private Limited",
+    title: "Trainee Software Developer",
+    company_name: "Grid R&D (Bangalore) Private Limited",
     icon: active,
     iconBg: "#ffff",
-    date: "{ July 2023 - Present }",
+    date: "{ OCT 2024 - Present }",
     points: [
-      "Led the architectural overhaul, breaking down the existing monolithic system into a Microservices-based architecture. This restructuring resulted in improved scalability, flexibility, and maintainability.",
-      "Implemented robust queue management to facilitate asynchronous communication between microservices, ensuring seamless data flow and fault tolerance.",
-      "Utilized a diverse technology stack, including Python, MongoDB, Elastic Search, MySQL, and PHP, to build and support various components of the system.",
-      "Managed data storage and retrieval by integrating MongoDB, Elastic Search, MySQL, and other database solutions to ensure efficient data handling.",
-      "Successfully refactored the legacy monolithic application into microservices, improving code maintainability and facilitating independent development and deployment of individual services.",
+      "Developed and enhanced the Job Portal application using Python, Django, and React implementing key features and optimizations.",
+      "Integrated automated email notifications for new user registrations, job applications, profile- matched job alerts, and employer - jobseeker inbox messages.",
+      "Resolved critical bugs in the Skills and Hiring Industry fields to ensure data accuracy and system stability.",
+      "Empowered employers with the ability to view applicant details directly on their dashboards for streamlined hiring.",
+      "Optimized the job - matching algorithm by implementing Doc2Vec for intelligent keyword extraction and semantic analysis of resumes and job descriptions.",
+      "Enhanced the admin dashboard, providing comprehensive insights into employer and candidate activities.",
+      "Developed new RESTful APIs for skills management and AI - driven job - matching scores.",
+      "Optimized the database schema, improving query efficiency and system performance.",
+      "Revamped the frontend UI with Tailwind CSS, ensuring a modern, responsive, and user - friendly experience.",
+      "Redesigned the frontend UI using React and Tailwind CSS, improving visual aesthetics and usability.",
+      "Collaborated with the team to debug, optimize, and enhance backend API functionality."
+
     ],
   },
-  {
-    title: "Software Engineer",
-    company_name: "Intellecto Global Services",
-    icon: intellecto,
-    iconBg: "#ffff",
-    date: "{ November 2022 - June 2023 }",
-    points: [
-      "Built RESTful APIs that served data to the JavaScript front-end, based on dynamically chosen user inputs that handled over 5000 concurrent users.",
-      "Partnered with a developer to implement RESTful APIs in Django, enabling analytics team to increase reporting speed by 14%.",
-      "Developed scalable and responsive web applications using React, Redux, and Tailwind-CSS.",
-      "Designed and implemented user interfaces using HTML, CSS, and Material-UI.",
-      "Utilized Git for version control and collaborated with team members on various projects.",
-    ],
-  },
-  {
-    title: "Full Stack Developer - Intern",
-    company_name: "Shiash Info Solutions Private Limited",
-    icon: shiash,
-    iconBg: "#ffff",
-    date: "{ July 2022 - September 2022 }",
-    points: [
-      "Developed full-stack web applications which processed, analyzed, and rendered data visually.",
-      "Planned, wrote, and debugged web applications and software's with complete accuracy.",
-      "Design and develop user interfaces using HTML, CSS, and JavaScript framework Angular.",
-      "Test and debug code using tools such as Postman and Chrome DevTools.",
-    ],
-  },
-  {
-    title: "Game Developer - Intern",
-    company_name: "Infox Technology",
-    icon: infox,
-    iconBg: "#ffff",
-    date: "{ December 2021 - March 2022 }",
-    points: [
-      "Work on a team of game developers to develop and improve existing games using Unity game engine.",
-      "Write clean, efficient, and well-documented code using C# programming language.",
-      "Participate in game design discussions and contribute ideas for game mechanics and features.",
-      "Collaborate with artists, designers, and other developers to ensure that the game meets the vision and goals of the project.",
-    ],
-  },
+  // {
+  //   title: "Software Engineer",
+  //   company_name: "Intellecto Global Services",
+  //   icon: intellecto,
+  //   iconBg: "#ffff",
+  //   date: "{ November 2022 - June 2023 }",
+  //   points: [
+  //     "Built RESTful APIs that served data to the JavaScript front-end, based on dynamically chosen user inputs that handled over 5000 concurrent users.",
+  //     "Partnered with a developer to implement RESTful APIs in Django, enabling analytics team to increase reporting speed by 14%.",
+  //     "Developed scalable and responsive web applications using React, Redux, and Tailwind-CSS.",
+  //     "Designed and implemented user interfaces using HTML, CSS, and Material-UI.",
+  //     "Utilized Git for version control and collaborated with team members on various projects.",
+  //   ],
+  // },
+  // {
+  //   title: "Full Stack Developer - Intern",
+  //   company_name: "Shiash Info Solutions Private Limited",
+  //   icon: shiash,
+  //   iconBg: "#ffff",
+  //   date: "{ July 2022 - September 2022 }",
+  //   points: [
+  //     "Developed full-stack web applications which processed, analyzed, and rendered data visually.",
+  //     "Planned, wrote, and debugged web applications and software's with complete accuracy.",
+  //     "Design and develop user interfaces using HTML, CSS, and JavaScript framework Angular.",
+  //     "Test and debug code using tools such as Postman and Chrome DevTools.",
+  //   ],
+  // },
+  // {
+  //   title: "Game Developer - Intern",
+  //   company_name: "Infox Technology",
+  //   icon: infox,
+  //   iconBg: "#ffff",
+  //   date: "{ December 2021 - March 2022 }",
+  //   points: [
+  //     "Work on a team of game developers to develop and improve existing games using Unity game engine.",
+  //     "Write clean, efficient, and well-documented code using C# programming language.",
+  //     "Participate in game design discussions and contribute ideas for game mechanics and features.",
+  //     "Collaborate with artists, designers, and other developers to ensure that the game meets the vision and goals of the project.",
+  //   ],
+  // },
 ];
 
 const projects = [
@@ -362,7 +370,7 @@ const projects = [
     source_code_link: "https://github.com/nandha2804",
   },
   {
-    name: "PortFolio-Nodejs",
+    name: "PortFolio-Angular",
     description:
       "Portfolio website with track of my career journey, projects, open-source contribution and much more.",
     tags: [
@@ -379,7 +387,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: portfolioNodejs,
+    image: portfolioAngular,
     source_code_link: "https://github.com/nandha2804",
   },
   {

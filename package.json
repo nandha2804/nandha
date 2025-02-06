@@ -15,6 +15,7 @@
     "@emailjs/browser": "^3.10.0",
     "@react-three/drei": "^9.56.24",
     "@react-three/fiber": "^8.11.1",
+    "caniuse-lite": "^1.0.30001697",
     "firebase": "^9.18.0",
     "framer-motion": "^9.0.7",
     "github-calendar": "^2.3.2",

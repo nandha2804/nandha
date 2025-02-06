@@ -5,13 +5,13 @@ import close from "./close.svg";
 import infox from "./company/infox_logo.png";
 import intellecto from "./company/intellecto.png";
 import shiash from "./company/shiash.png";
-import active from "./company/active.jpeg"
+import active from "./company/GRID-LOGO.png"
 
 import frontend from "./front-end.png";
 import backend from "./back-end.png";
 import aiml from "./ai-ml.png";
 
-import pc from "./pc.png";
+import pc from "./pc.webp";
 
 const python =
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg";
