@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import { child, fadeIn } from "../Utils/Motion";
 import Bubble from "./Bubble BTN/Bubble";
-const name = ["R", "A", "H", "U", "L", " ", "R"];
+const name = ["N", "A", "N", "D", "A", " K", "U", "M", "A", "R", " ", "C", "H", "I", "N", "N", "A", "S", "A", "M", "Y"];
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -59,7 +59,7 @@ const Hero = () => {
                 transform: "translateX(0vw) translateY(0vw)",
               }}
               transition={{ duration: 2, type: "spring" }}
-              className={`${styles.heroHeadText} font text-white `}
+              className={`${styles.heroHeadText} text-sm text-white`}
             >
               Hi, I'm
             </motion.h1>
@@ -67,20 +67,20 @@ const Hero = () => {
               variants={fadeIn}
               initial="hidden"
               whileInView="visible"
-              className={`${styles.heroHeadText}  text-white flex `}
+              className={`${styles.heroHeadText} text-sm text-white flex`}
             >
               {name.map((name, index) => (
                 <motion.span
                   key={index}
                   variants={child}
-                  className=" font text-[#4dba87]"
+                  className="text-[#4dba87]"
                 >
                   {name === " " ? "\u00A0" : name}
                 </motion.span>
               ))}
             </motion.div>
 
-            <div className={`${styles.heroSubText}  mt-2 text-white-100`}>
+            <div className={`${styles.heroSubText} mt-2 text-white-100`}>
               <motion.div
                 initial={{
                   opacity: 0,
@@ -91,9 +91,8 @@ const Hero = () => {
                   transform: "translateX(0vw) translateY(0vw)",
                 }}
                 transition={{ duration: 2, type: "spring" }}
-                className="font"
               >
-                I am a Full stack Web Developer,
+                I am a Software Developer,
                 <br className="sm:block hidden" />
                 with an emphasis on Responsive web designs
               </motion.div>

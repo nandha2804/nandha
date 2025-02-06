@@ -7,12 +7,12 @@ import {
   html,
   css,
   reactjs,
-  angular,
+  nodejs,
   github,
   aws,
   django,
   mysql,
-  postgresql,
+  mongodb,
   git,
   figma,
   python,
@@ -20,7 +20,7 @@ import {
   intellecto,
   infox,
   active,
-  portfolioAngular,
+  portfolioNodejs,
   portfolioReact,
   questTracler,
   treasureHunt,
@@ -118,8 +118,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Angular",
-    icon: angular,
+    name: "Nodejs",
+    icon: nodejs,
   },
 
   {
@@ -127,8 +127,8 @@ const technologies = [
     icon: mysql,
   },
   {
-    name: "PostgreSql",
-    icon: postgresql,
+    name: "mongoDB",
+    icon: mongodb,
   },
   {
     name: "AWS",
@@ -362,7 +362,7 @@ const projects = [
     source_code_link: "https://github.com/nandha2804",
   },
   {
-    name: "PortFolio-Angular",
+    name: "PortFolio-Nodejs",
     description:
       "Portfolio website with track of my career journey, projects, open-source contribution and much more.",
     tags: [
@@ -379,7 +379,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: portfolioAngular,
+    image: portfolioNodejs,
     source_code_link: "https://github.com/nandha2804",
   },
   {

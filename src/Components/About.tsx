@@ -93,7 +93,7 @@ const About = () => {
         className="mt-4 text-justify secondary-color  text-[17px] max-w-7xl leading-[30px]"
       >
         I'm a skilled software developer with experience in Python, Django,
-        HTML5, CSS3, TypeScript, JavaScript, React, MySQL, PostgreSQL AWS and Docker.
+        HTML5, CSS3, TypeScript, JavaScript, React, MySQL, MongoDB, AWS and Docker.
         And also Experienced in developing Front-end web Applications and
         RESTfull API's. I'm a quick learner and collaborate closely with clients
         to create efficient, scalable, and user-friendly solutions that solve

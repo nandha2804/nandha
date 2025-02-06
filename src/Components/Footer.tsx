@@ -9,8 +9,8 @@ import Bounce from "react-reveal/Bounce";
 const Footer = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
-  const R = "< R";
-  const name = "ahul />";
+  const R = "< N";
+  const name = "anda />";
   return (
     <motion.nav
       initial={{

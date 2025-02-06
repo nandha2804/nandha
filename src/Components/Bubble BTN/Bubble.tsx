@@ -96,22 +96,19 @@ const Bubble = () => {
             },
           }}
           style={{
-            //   position: isMobile ? "relative" : "absolute",
-            //   top: isMobile ? "" : "7vh",
-            //   left: isMobile ? "" : "30vh",
             width: isMobile ? "20vw" : "",
             height: isMobile ? "20vw" : "",
             fontSize: isMobile ? "3vw" : "",
-            //   marginLeft: isMobile ? "30vw" : "",
           }}
-          href={resume}
+          href="https://docs.google.com/document/d/16CmUamzH6pcTC9ehYbb4cLyvYyJbe_5TmbvRQ6AbKfQ/edit?tab=t.0"
           target="_blank"
+          rel="noopener noreferrer"
           className="btn-1 font"
         >
           Resume
         </motion.a>
       </motion.div>
-    </div>
+    </div >
   );
 };
 

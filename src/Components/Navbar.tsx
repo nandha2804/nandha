@@ -9,8 +9,8 @@ import Bounce from "react-reveal/Bounce";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
-  const R = "< R";
-  const name = "ahul />";
+  const R = "< N";
+  const name = "anda />";
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 pb-0 fixed top-0 z-20 bg-primary`}
