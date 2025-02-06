@@ -16,7 +16,7 @@ import GitHubCalendar from 'react-github-calendar';
 
 const Statics = () => {
   // useEffect(() => {
-  //   GitHubCalendar(".calendar", "rahulr001", {
+  //   GitHubCalendar(".calendar", "nanda001", {
   //     responsive: true,
   //     tooltip: true,
   //   });
@@ -71,7 +71,7 @@ const Statics = () => {
       <Zoom top cascade duration={1500}>
         <h2 className={styles.sectionHeadText}>GitHub Contribution.</h2>
       </Zoom>
-      <div className="calendar"><GitHubCalendar blockSize={15} username="rahulr001" /></div>;
+      <div className="calendar"><GitHubCalendar blockSize={15} username="nandha2804" /></div>;
     </>
   );
 };

@@ -229,7 +229,7 @@ const projects = [
       },
     ],
     image: propertyHub,
-    source_code_link: "https://github.com/rahulr001/Property-hub-IGS.git",
+    source_code_link: "https://github.com/nandha2804",
   },
   {
     name: "Enquiry Hub",
@@ -250,7 +250,7 @@ const projects = [
       },
     ],
     image: enquiryHub,
-    source_code_link: "https://github.com/rahulr001/Enquiry-hub-IGS.git",
+    source_code_link: "https://github.com/nandha2804",
   },
   {
     name: "E-Commerce",
@@ -272,7 +272,7 @@ const projects = [
     ],
     image: eCommerce,
     source_code_link:
-      "https://github.com/rahulr001/E-Commerse-React-Django.git",
+      "https://github.com/nandha2804",
   },
   {
     name: "PortFolio-React",
@@ -293,7 +293,7 @@ const projects = [
       },
     ],
     image: portfolioReact,
-    source_code_link: "https://github.com/rahulr001/dev.rahul.git",
+    source_code_link: "https://github.com/nandha2804",
   },
 
   {
@@ -315,7 +315,7 @@ const projects = [
       },
     ],
     image: questTracler,
-    source_code_link: "https://github.com/rahulr001/Quest-Tracker.git",
+    source_code_link: "https://github.com/nandha2804",
   },
 
   {
@@ -338,7 +338,7 @@ const projects = [
     ],
     image: hotel,
     source_code_link:
-      "https://github.com/rahulr001/Hotel-Reservation-Django-React.git",
+      "https://github.com/nandha2804",
   },
   {
     name: "Math Flash Cards",
@@ -359,7 +359,7 @@ const projects = [
       },
     ],
     image: math,
-    source_code_link: "https://github.com/rahulr001/Math-Flash-Cards.git",
+    source_code_link: "https://github.com/nandha2804",
   },
   {
     name: "PortFolio-Angular",
@@ -380,7 +380,7 @@ const projects = [
       },
     ],
     image: portfolioAngular,
-    source_code_link: "https://github.com/rahulr001/Rahul-R.git",
+    source_code_link: "https://github.com/nandha2804",
   },
   {
     name: "The Treasure Hunt",
@@ -401,7 +401,7 @@ const projects = [
       },
     ],
     image: treasureHunt,
-    source_code_link: "https://github.com/rahulr001/The-Treasure-Hunt.git",
+    source_code_link: "https://github.com/nandha2804",
   },
 ];
 

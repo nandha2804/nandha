@@ -53,7 +53,7 @@ const Footer = () => {
           ))}
         </ul>
         <p className="text-secondary text-[.7rem] xxs:text[1rem]">
-          &copy;2023 Developer Rahul | All Rights Reserved
+          &copy;2025 Developer nandi | All Rights Reserved
         </p>
       </div>
     </motion.nav>

@@ -62,7 +62,7 @@ const Bubble = () => {
             height: isMobile ? "13vw" : "",
             fontSize: isMobile ? "3vw" : "1vw",
           }}
-          href="https://www.linkedin.com/in/rahulr001"
+          href="https://www.linkedin.com/in/nandakumar-chinnasamy-835ba9286/"
           target="_blank"
           className="btn font"
         >
