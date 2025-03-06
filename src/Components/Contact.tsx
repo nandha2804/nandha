@@ -52,109 +52,106 @@ function Contact() {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0 max-w-7xl mx-auto px-4 sm:px-8 md:px-16 py-10 md:py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center md:text-left"
-        >
-          <p className="text-[#4dba87] font-medium mb-2">Get in touch</p>
-          <h3 className="text-4xl md:text-5xl font-bold text-white">Contact.</h3>
-        </motion.div>
+    <div className="flex flex-col">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="text-center md:text-left mb-6 sm:mb-8"
+      >
+        <p className="text-[#4dba87] font-medium text-base sm:text-lg mb-2">Get in touch</p>
+        <h3 className="text-3xl sm:text-4xl font-bold text-white">Contact.</h3>
+      </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-12 flex flex-col gap-8 items-center"
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="flex justify-center w-full"
+      >
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="w-full max-w-2xl border border-[#4dba87]/20 rounded-2xl p-6 sm:p-8"
         >
-          <form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className="bg-[#161b22]/80 backdrop-blur-md p-8 sm:p-10 rounded-2xl w-full max-w-2xl
-                     border border-[#4dba87]/20 shadow-lg hover:shadow-[#4dba87]/5 transition-shadow duration-300"
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="space-y-4 sm:space-y-6"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="space-y-8"
+            <div>
+              <label className="flex flex-col">
+                <span className="text-gray-200 font-medium mb-2">Your Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="What's your name?"
+                  className="border border-[#4dba87]/20 py-3 px-4 placeholder:text-gray-400 text-white rounded-lg
+                           outline-none text-base sm:text-lg focus:border-[#4dba87]/50 transition-colors duration-300
+                           bg-transparent"
+                />
+              </label>
+            </div>
+
+            <div>
+              <label className="flex flex-col">
+                <span className="text-gray-200 font-medium mb-2">Your Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="What's your email?"
+                  className="border border-[#4dba87]/20 py-3 px-4 placeholder:text-gray-400 text-white rounded-lg
+                           outline-none text-base sm:text-lg focus:border-[#4dba87]/50 transition-colors duration-300
+                           bg-transparent"
+                />
+              </label>
+            </div>
+
+            <div>
+              <label className="flex flex-col">
+                <span className="text-gray-200 font-medium mb-2">Your Message</span>
+                <textarea
+                  rows={5}
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="What do you want to say?"
+                  className="border border-[#4dba87]/20 py-3 px-4 placeholder:text-gray-400 text-white rounded-lg
+                           outline-none text-base sm:text-lg focus:border-[#4dba87]/50 transition-colors duration-300
+                           bg-transparent resize-none"
+                />
+              </label>
+            </div>
+
+            <motion.button
+              type="submit"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-[#4dba87] py-3 px-6 w-full text-white font-bold rounded-lg
+                       hover:bg-[#3da876] text-base sm:text-lg
+                       transition-all duration-300 ease-out mt-2"
             >
-              <div className="mb-6">
-                <label className="flex flex-col">
-                  <span className="text-gray-200 font-medium mb-3">Your Name</span>
-                  <input
-                    type="text"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    placeholder="What's your name?"
-                    className="bg-black/30 py-4 px-6 placeholder:text-gray-400 text-white rounded-lg
-                             outline-none border border-[#4dba87]/20 font-medium
-                             focus:border-[#4dba87]/50 transition-colors duration-300"
-                  />
-                </label>
-              </div>
-
-              <div className="mb-6">
-                <label className="flex flex-col">
-                  <span className="text-gray-200 font-medium mb-3">Your Email</span>
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="What's your email?"
-                    className="bg-black/30 py-4 px-6 placeholder:text-gray-400 text-white rounded-lg
-                             outline-none border border-[#4dba87]/20 font-medium
-                             focus:border-[#4dba87]/50 transition-colors duration-300"
-                  />
-                </label>
-              </div>
-
-              <div className="mb-6">
-                <label className="flex flex-col">
-                  <span className="text-gray-200 font-medium mb-3">Your Message</span>
-                  <textarea
-                    rows={7}
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="What do you want to say?"
-                    className="bg-black/30 py-4 px-6 placeholder:text-gray-400 text-white rounded-lg
-                             outline-none border border-[#4dba87]/20 font-medium resize-none
-                             focus:border-[#4dba87]/50 transition-colors duration-300"
-                  />
-                </label>
-              </div>
-
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-[#4dba87] py-4 px-8 outline-none w-full text-white font-bold rounded-lg
-                         shadow-lg shadow-[#4dba87]/20 hover:bg-[#3da876]
-                         transition-all duration-300 ease-out"
-              >
-                {loading ? (
-                  <span className="inline-flex items-center">
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Sending...
-                  </span>
-                ) : "Send Message"}
-              </motion.button>
-            </motion.div>
-          </form>
-        </motion.div>
-      </div>
+              {loading ? (
+                <span className="inline-flex items-center justify-center">
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Sending...
+                </span>
+              ) : "Send Message"}
+            </motion.button>
+          </motion.div>
+        </form>
+      </motion.div>
     </div>
   );
 }

@@ -1,121 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-color: #4dba87;
-  --primary-color-dark: #3da876;
-  --background-primary: #0f1115;
-  --background-secondary: #161b22;
-  --text-primary: #ffffff;
-  --text-secondary: #94a3b8;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
-/* Base styles */
 html {
+  height: -webkit-fill-available;
   scroll-behavior: smooth;
-  background-color: #0f1115;
-  background-image:
-    radial-gradient(circle at 50% 50%, rgba(77, 186, 135, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 0% 0%, rgba(77, 186, 135, 0.03) 0%, transparent 30%),
-    radial-gradient(circle at 100% 100%, rgba(77, 186, 135, 0.03) 0%, transparent 30%);
-  background-attachment: fixed;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  color: var(--text-primary);
+  @apply bg-primary text-white;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   overflow-x: hidden;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  backdrop-filter: blur(100px);
+.hash-span {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  display: block;
 }
 
-#root::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(to bottom,
-    rgba(15, 17, 21, 0.8) 0%,
-    rgba(15, 17, 21, 0.7) 50%,
-    rgba(15, 17, 21, 0.8) 100%
-  );
-  pointer-events: none;
-  z-index: -1;
+/* Custom Scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
-/* Utility classes */
-.violet-gradient {
-  background: var(--primary-color);
-  background: linear-gradient(-90deg, var(--primary-color) 0%, rgba(60, 51, 80, 0) 100%);
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.text-gradient {
-  background: linear-gradient(to right, var(--primary-color), var(--primary-color-dark));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Snap Scrolling */
+.snap-y {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
+.snap-start {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Smooth Section Transitions */
+section {
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Scroll Indicator Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
     opacity: 1;
-    transform: translateY(0);
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
   }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
+.scroll-indicator {
+  animation: pulse 2s infinite;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Progress Bar Animation */
+.progress-bar {
+  transition: width 0.3s ease-out;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--background-secondary);
+/* Section Transitions */
+.section-enter {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 4px;
+.section-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color-dark);
+.section-exit {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Selection */
-::selection {
-  background: var(--primary-color);
-  color: white;
+.section-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* Focus outline */
-:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-/* Debug */
-.debug * {
-  outline: 1px solid rgba(255, 0, 0, 0.1);
+/* Improved Scroll Performance */
+* {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
