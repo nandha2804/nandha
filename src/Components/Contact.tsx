@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../style";
 import { SectionWraper } from "../Utils";
+import pcImg from "../Assets/pc.webp";
 
 function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -30,7 +31,7 @@ function Contact() {
           from_name: form.name,
           to_name: 'Nandha Kumar',
           from_email: form.email,
-          to_email: 'nandha28042003@gmail.com',
+          to_email: 'cnkumar28@gmail.com',
           message: form.message,
         },
         'wssqdw0XKRykQ4bzY'
@@ -61,7 +62,7 @@ function Contact() {
         className="text-center md:text-left mb-6 sm:mb-8"
       >
         <p className="text-[#4dba87] font-medium text-base sm:text-lg mb-2">Get in touch</p>
-        <h3 className="text-3xl sm:text-4xl font-bold text-white">Contact.</h3>
+        <h3 className="text-3xl sm:text-4xl font-bold text-white">Contact</h3>
       </motion.div>
 
       <motion.div
@@ -69,7 +70,7 @@ function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="flex justify-center w-full"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full items-center"
       >
         <form
           ref={formRef}
@@ -151,6 +152,43 @@ function Contact() {
             </motion.button>
           </motion.div>
         </form>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.5,
+            delay: 0.3,
+            type: "spring",
+            stiffness: 200
+          }}
+          className="flex justify-center items-center h-[300px] md:h-[600px]"
+        >
+          <motion.div
+            whileHover={{ scale: 1.08 }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 15
+            }}
+            className="h-full"
+          >
+            <motion.img
+              src={pcImg}
+              alt="PC Setup"
+              className="w-full h-full rounded-lg object-contain"
+              animate={{
+                y: [0, -20, 0],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+          </motion.div>
+        </motion.div>
       </motion.div>
     </div>
   );

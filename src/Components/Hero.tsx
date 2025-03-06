@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Bubble from "./Bubble BTN/Bubble";
 import manImage from "../Assets/man.png";
 
-const name: string[] = ["N", "A", "N", "D", "A", " ", "K", "U", "M", "A", "R", " ", " ", " ", "C", "H", "I", "N", "N", "A", "S", "A", "M", "Y"];
+const name: string[] = ["N", "A", "N", "D", "A", "K", "U", "M", "A", "R", " ", " ", " ", "C", "H", "I", "N", "N", "A", "S", "A", "M", "Y"];
 
 const Hero = () => {
   return (
@@ -21,12 +21,12 @@ const Hero = () => {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
+                  className="text-2xl sm:text-3xl font-bold text-white mb-4"
                 >
                   Hi, I'm
                 </motion.h1>
                 <div className="flex justify-center md:justify-start">
-                  <div className="flex flex-wrap gap-1 sm:gap-2">
+                  <div className="inline-flex flex-wrap gap-1 px-4 md:px-0">
                     {name.map((letter, index) => (
                       <motion.span
                         key={index}
@@ -42,7 +42,7 @@ const Hero = () => {
                           color: "#4dba87",
                           transition: { duration: 0.2 }
                         }}
-                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white cursor-default"
+                        className="text-base sm:text-2xl md:text-3xl font-bold text-white cursor-default"
                       >
                         {letter}
                       </motion.span>

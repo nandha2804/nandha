@@ -39,13 +39,13 @@ const ServiceCard = ({ index, title, icon }: any) => (
 
 const About = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-center md:text-left mb-6 sm:mb-8"
+        className="w-full text-center mb-6 sm:mb-8"
       >
         <p className="text-[#4dba87] font-medium text-base sm:text-lg mb-2">Introduction</p>
         <h2 className="text-3xl sm:text-4xl font-bold text-white">Overview.</h2>
@@ -56,7 +56,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-base sm:text-lg text-gray-300 max-w-3xl mb-8 sm:mb-12 leading-relaxed text-center md:text-left"
+        className="text-base sm:text-lg text-gray-300 w-full mb-8 sm:mb-12 leading-relaxed text-justify"
       >
         I'm a skilled software developer with experience in{" "}
         <span className="text-[#4dba87]">TypeScript</span> and{" "}

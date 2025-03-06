@@ -63,7 +63,7 @@ const ProjectCard = ({
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <p className="mt-2 text-secondary text-[14px] text-justify">{description}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -83,15 +83,15 @@ const ProjectCard = ({
 
 const Works = () => {
   const subText = ["<", "M", "y", " ", "w", "o", "r", "k", " ", "/", ">"];
-  const title = ["P", "r", "o", "j", "e", "c", "t", "s", "."];
+  const title = ["P", "r", "o", "j", "e", "c", "t", "s"];
   const p = "< MY WORK />";
   return (
     <>
       <Zoom top cascade duration={1500}>
-        <p className={styles.sectionSubText}>{p}</p>
+        <p className="text-[#4dba87] font-medium text-lg sm:text-xl mb-2">{p}</p>
       </Zoom>
       <Zoom top cascade duration={1500}>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+        <h2 className={styles.sectionHeadText}>Projects</h2>
       </Zoom>
 
       <motion.div
