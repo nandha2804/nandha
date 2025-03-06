@@ -1,128 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto Mono', monospace;
-    scroll-behavior: smooth;
-    color-scheme: dark;
+:root {
+  --primary-color: #4dba87;
+  --primary-color-dark: #3da876;
+  --background-primary: #0f1115;
+  --background-secondary: #161b22;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
 }
 
-.font {
-    font-family: "Poppins", sans-serif !important;
-
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  background-color: #0f1115;
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(77, 186, 135, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 0% 0%, rgba(77, 186, 135, 0.03) 0%, transparent 30%),
+    radial-gradient(circle at 100% 100%, rgba(77, 186, 135, 0.03) 0%, transparent 30%);
+  background-attachment: fixed;
 }
 
-.secondary-color {
-    color: aliceblue;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  color: var(--text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.hash-span {
-    margin-top: -100px;
-    padding-bottom: 100px;
-    display: block;
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  backdrop-filter: blur(100px);
 }
 
-.black-gradient {
-    background: #2d2e32;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,
-            #2d2e32,
-            #2d2e32);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,
-            #2d2e32,
-            #2d2e32);
-
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+#root::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(15, 17, 21, 0.8) 0%,
+    rgba(15, 17, 21, 0.7) 50%,
+    rgba(15, 17, 21, 0.8) 100%
+  );
+  pointer-events: none;
+  z-index: -1;
 }
 
+/* Utility classes */
 .violet-gradient {
-    background: #4dba87;
-    background: linear-gradient(-90deg, #4dba87 0%, rgba(60, 51, 80, 0) 100%);
-    background: -webkit-linear-gradient(-90deg,
-            #4dba87 0%,
-            rgba(60, 51, 80, 0) 100%);
+  background: var(--primary-color);
+  background: linear-gradient(-90deg, var(--primary-color) 0%, rgba(60, 51, 80, 0) 100%);
 }
 
-
-.orange-text-gradient {
-    background: #f12711;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top,
-            #f12711,
-            #f5af19);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top,
-            #f12711,
-            #f5af19);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.text-gradient {
+  background: linear-gradient(to right, var(--primary-color), var(--primary-color-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.green-text-gradient {
-    background: #11998e;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top,
-            #11998e,
-            #38ef7d);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top,
-            #11998e,
-            #38ef7d);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.blue-text-gradient {
-    /* background: -webkit-linear-gradient(#eee, #333); */
-    background: #56ccf2;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top,
-            #2f80ed,
-            #56ccf2);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top,
-            #2f80ed,
-            #56ccf2);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
-.pink-text-gradient {
-    background: #ec008c;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top,
-            #ec008c,
-            #fc6767);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top,
-            #ec008c,
-            #fc6767);
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-
-
-.tech {
-    width: 80%;
-    height: 80%;
-
-
-    transition: all .5s ease-in-out;
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
 }
 
-.tech:hover {
-    transform: scale(1.2);
-    cursor: pointer;
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color-dark);
+}
+
+/* Selection */
+::selection {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Focus outline */
+:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Debug */
+.debug * {
+  outline: 1px solid rgba(255, 0, 0, 0.1);
 }

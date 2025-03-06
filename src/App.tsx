@@ -1,43 +1,52 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import {
   About,
-  Contact,
   Experience,
   Hero,
-  Navbar,
   Tech,
   Works,
-  StarsCanvas,
+  Contact,
+  Navbar,
   Footer,
+  StarsCanvas,
 } from "./Components";
 import BgParticals from "./Components/canvas/BgParticals";
-import { useEffect } from "react";
 import Statics from "./Components/GithunStatics/Statics";
 
 function App() {
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-  }
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <Router>
-      <div className="relative overflow-hidden  z-0 bg-primary">
-        <BgParticals />
-        <Navbar />
-        <Hero />
-        <About />
-        <Statics />
-        <Experience />
-        <Tech />
-        <Works />
-        <div className="relative z-0">
-          <Contact />
+      <div className="relative z-0 bg-primary">
+        {/* Background Effects */}
+        <div className="fixed inset-0 z-[-2]">
+          <BgParticals />
+        </div>
+        <div className="fixed inset-0 z-[-1]">
           <StarsCanvas />
         </div>
-        <Footer />
+
+        {/* Main Content */}
+        <div className="relative z-0">
+          <Navbar />
+          
+          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+            <Hero />
+          </div>
+
+          <div className="relative z-0">
+            <About />
+            <Experience />
+            <Tech />
+            <Works />
+            <Statics />
+            <div className="relative z-0">
+              <Contact />
+              <StarsCanvas />
+            </div>
+          </div>
+
+          <Footer />
+        </div>
       </div>
     </Router>
   );

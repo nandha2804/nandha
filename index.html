@@ -1,31 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="h-full">
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
-    <meta http-equiv="expires" content="0">
-    <meta http-equiv="pragma" content="no-cache">
     <link rel="icon" type="image/svg+xml" href="/src/Assets/fevicon.png" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nanda's | Portfolio</title>
+    <title>Nanda's Portfolio</title>
+    <style>
+        /* Initial loading state */
+        #root:empty {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #0f1115;
+            color: white;
+        }
 
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "niengp4tdi");
-    </script>
+        #root:empty::before {
+            content: "Loading...";
+            font-family: system-ui, -apple-system, sans-serif;
+        }
 
+        /* Error state */
+        #root.error {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #0f1115;
+            color: #ff5555;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Basic reset */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: #0f1115;
+            color: white;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+    </style>
 </head>
-
-<body>
+<body class="h-full">
     <div id="root"></div>
-    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+    <script>
+        // Error handling
+        window.addEventListener('error', function(event) {
+            const rootElement = document.getElementById('root');
+            if (rootElement) {
+                rootElement.className = 'error';
+                rootElement.innerHTML = `
+                    <div>
+                        <h2 style="margin-bottom: 1rem">Failed to load application</h2>
+                        <pre style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 4px; text-align: left; margin: 1rem 0; font-size: 0.875rem; overflow: auto; max-width: 100%;">
+                            ${event.message}
+                        </pre>
+                        <button onclick="window.location.reload()" style="background: #4dba87; border: 0; padding: 0.5rem 1rem; border-radius: 4px; color: white; cursor: pointer;">
+                            Reload page
+                        </button>
+                    </div>
+                `;
+            }
+        });
     </script>
     <script type="module" src="/src/main.tsx"></script>
 </body>
-
 </html>

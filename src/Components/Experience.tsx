@@ -1,147 +1,104 @@
+import React from "react";
 import {
-  VerticalTimelineElement,
   VerticalTimeline,
+  VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../style";
 import { experiences } from "../Constants";
 import { SectionWraper } from "../Utils";
-import "react-vertical-timeline-component/style.min.css";
-import {
-  subTitleChild,
-  subTitleFadeIn,
-  titleChild,
-  titleFadeIn,
-} from "../Utils/Motion";
-import Fade from "react-reveal";
-import Zoom from "react-reveal/Zoom";
 
-const ExperienceCard = ({ experience }) => {
-  return (
-    <VerticalTimelineElement
-      contentStyle={{
-        background: "#161b22",
-        color: "#fff",
-        border: "#4dba87 2px solid",
-      }}
-      contentArrowStyle={{ borderRight: "17px solid  #4dba87" }}
-      date={experience.date}
-      iconStyle={{ background: "white" }}
-      icon={
-        <div className="flex justify-center items-center w-full h-full">
-          <img
-            src={experience.icon}
-            alt={experience.company_name}
-            className="w-[60%] h-[60%] object-contain "
-          />
-        </div>
-      }
-    >
-      <motion.div
-        initial={{
-          opacity: 0,
-          transform: " translateY(3vw)",
-        }}
-        whileInView={{
-          opacity: 1,
-          transform: "  translateY(0vw)",
-        }}
-        transition={{ duration: 1.5, type: "spring" }}
-      >
-        <h3 className="text-[#4dba87] text-[24px] font-bold">
-          {experience.title}
-        </h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
-
-        <ul className="mt-5 list-disc ml-5 space-y-2">
-          {experience.points.map((desc, index) => (
-            <li
-              key={index}
-              className="text-white-100 text-[14px] pl-1 tracking-wider"
-            >
-              {desc}
-            </li>
-          ))}
-        </ul>
-      </motion.div>
-    </VerticalTimelineElement>
-  );
-};
-
-const Experience = () => {
-  //   const subText = [
-  //     "<",
-  //     " ",
-  //     "W",
-  //     "h",
-  //     "a",
-  //     "t",
-  //     " ",
-  //     "I",
-  //     " ",
-  //     "h",
-  //     "a",
-  //     "v",
-  //     "e",
-  //     " ",
-  //     "d",
-  //     "o",
-  //     "n",
-  //     "e",
-  //     " ",
-  //     "s",
-  //     "o",
-  //     " ",
-  //     "f",
-  //     "a",
-  //     "r",
-  //     " ",
-  //     "/",
-  //     ">",
-  //   ];
-  //   const title = [
-  //     "W",
-  //     "o",
-  //     "r",
-  //     "k",
-  //     " ",
-  //     "E",
-  //     "x",
-  //     "p",
-  //     "e",
-  //     "r",
-  //     "i",
-  //     "e",
-  //     "n",
-  //     "c",
-  //     "e",
-  //     ".",
-  //   ];
-  const p = "< What I have done so far />";
-  return (
-    <>
-      <Zoom top cascade duration={1500}>
-        <p className={styles.sectionSubText}>{p}</p>
-      </Zoom>
-      <Zoom top cascade duration={1500}>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
-      </Zoom>
-
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
-        </VerticalTimeline>
+const TimelineCard = ({ experience }: any) => (
+  <VerticalTimelineElement
+    contentStyle={{
+      background: "rgba(22, 27, 34, 0.8)",
+      backdropFilter: "blur(10px)",
+      color: "#fff",
+      border: "1px solid rgba(77, 186, 135, 0.2)",
+      boxShadow: "0 0 20px rgba(77, 186, 135, 0.1)",
+      borderRadius: "16px",
+      padding: "24px",
+    }}
+    contentArrowStyle={{ borderRight: "7px solid rgba(77, 186, 135, 0.3)" }}
+    date={experience.date}
+    iconStyle={{
+      background: "#161b22",
+      border: "2px solid #4dba87",
+      boxShadow: "0 0 0 4px rgba(77, 186, 135, 0.2)",
+    }}
+    icon={
+      <div className="flex justify-center items-center w-full h-full">
+        <img
+          src={experience.icon}
+          alt={experience.company_name}
+          className="w-[60%] h-[60%] object-contain"
+        />
       </div>
-    </>
+    }
+  >
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+    >
+      <h3 className="text-white text-2xl font-bold">{experience.title}</h3>
+      <p className="text-[#4dba87] text-lg font-medium mt-1">
+        {experience.company_name}
+      </p>
+    </motion.div>
+
+    <motion.ul
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: 0.2 }}
+      className="mt-5 space-y-3"
+    >
+      {experience.points.map((point: string, index: number) => (
+        <li
+          key={`experience-point-${index}`}
+          className="text-gray-300 text-base leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-2 before:h-2 before:bg-[#4dba87] before:rounded-full"
+        >
+          {point}
+        </li>
+      ))}
+    </motion.ul>
+  </VerticalTimelineElement>
+);
+
+function Experience() {
+  return (
+    <div className="relative min-h-screen overflow-hidden">
+      <div className="absolute inset-0 max-w-7xl mx-auto px-4 sm:px-8 md:px-16 py-10 md:py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center md:text-left"
+        >
+          <p className="text-[#4dba87] font-medium mb-2">What I have done so far</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">Work Experience.</h2>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-16 md:mt-20"
+        >
+          <VerticalTimeline animate={true}>
+            {experiences.map((experience, index) => (
+              <TimelineCard key={index} experience={experience} />
+            ))}
+          </VerticalTimeline>
+        </motion.div>
+      </div>
+    </div>
   );
-};
+}
 
 export default SectionWraper(Experience, "work");

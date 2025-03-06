@@ -6,8 +6,8 @@ import About from "./About";
 import Tech from "./Tech";
 import Experience from "./Experience";
 import Works from "./Works";
-
 import Contact from "./Contact";
+import DebugWrapper from "./DebugWrapper";
 
 export {
   Hero,
@@ -18,7 +18,8 @@ export {
   Experience,
   Works,
   Contact,
-  EarthCanvas,
-  ComputersCanvas,
+  EarthCanvas, 
+  ComputersCanvas, 
   StarsCanvas,
+  DebugWrapper
 };

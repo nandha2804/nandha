@@ -1,110 +1,85 @@
-import Tilt from "react-parallax-tilt";
+import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../style";
 import { services } from "../Constants";
 import { SectionWraper } from "../Utils";
-import {
-  swing,
-  subTitleChild,
-  subTitleFadeIn,
-  fadeIn,
-  child,
-  titleFadeIn,
-  titleChild,
-  desc,
-} from "../Utils/Motion";
-import Zoom from "react-reveal/Zoom";
-import Fade from "react-reveal/Fade";
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt
-    perspective={2000}
-    glareEnable={true}
-    glareMaxOpacity={0.45}
-    glareBorderRadius={"20px"}
-    glarePosition={"all"}
-    scale={1.1}
-    transitionSpeed={1500}
-    className="xs:w-[250px] w-full"
-  >
-    <motion.div
-      initial={{ opacity: 0, transform: "translateX(-20vw)" }}
-      whileInView={{ opacity: 1, transform: "translateX(0px)" }}
-      transition={{ duration: index * 1.5, type: "spring" }}
-      className="w-full p-[1px] rounded-[20px] shadow-card"
-      style={{ border: "#4dba87 2px solid" }}
-    >
-      <div className="bg-tertiary rounded-[20px] ">
-        <motion.div
-          variants={swing}
-          animate="visible"
-          className="py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-        >
-          <img
-            src={icon}
-            alt="web-development"
-            className="w-16 h-16 object-contain"
-          />
 
-          <h3 className="text-white text-[20px] font-bold text-center">
-            {title}
-          </h3>
-        </motion.div>
+const ServiceCard = ({ index, title, icon }: any) => (
+  <div className="w-full xs:w-[250px]">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: index * 0.2 }}
+      className="relative w-full overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-[#4dba87] to-[#3da876] opacity-20 rounded-[20px]" />
+      <div
+        className="bg-[#161b22]/80 backdrop-blur-md rounded-[20px] py-6 px-8 min-h-[260px]
+                   flex justify-evenly items-center flex-col hover:scale-105 transition-transform duration-300
+                   border border-[#4dba87]/20"
+      >
+        <div className="w-16 h-16 relative">
+          <motion.img
+            src={icon}
+            alt={title}
+            className="w-full h-full object-contain"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
+          />
+        </div>
+        <h3 className="text-white text-xl font-semibold text-center mt-4">
+          {title}
+        </h3>
       </div>
     </motion.div>
-  </Tilt>
+  </div>
 );
 
 const About = () => {
-  //   const subText = [
-  //     "<",
-  //     " ",
-  //     "I",
-  //     "n",
-  //     "t",
-  //     "r",
-  //     "o",
-  //     "d",
-  //     "u",
-  //     "c",
-  //     "t",
-  //     "i",
-  //     "o",
-  //     "n",
-  //     " ",
-  //     "/>",
-  //   ];
-  const title = ["O", "v", "e", "r", "v", "i", "e", "w", "."];
-  const p = "< Introduction />";
   return (
-    <>
-      <Zoom top cascade duration={1500}>
-        <span className="   sm:text-[18px] text-[14px] secondary-color uppercase">
-          {p}
-        </span>
-      </Zoom>
-      <Zoom top cascade duration={1500}>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </Zoom>
+    <div className="relative w-full min-h-screen overflow-hidden">
+      <div className="absolute inset-0 max-w-7xl mx-auto px-4 sm:px-8 md:px-16 py-10 md:py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center md:text-left"
+        >
+          <p className="text-[#4dba87] font-medium mb-2">Introduction</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">Overview.</h2>
+        </motion.div>
 
-      <motion.div
-        variants={desc}
-        initial="hidden"
-        whileInView="visible"
-        className="mt-4 text-justify secondary-color  text-[17px] max-w-7xl leading-[30px]"
-      >
-        I'm a skilled software developer with experience in Python, Django,
-        HTML5, CSS3, TypeScript, JavaScript, React, MySQL, MongoDB, AWS and Docker.
-        And also Experienced in developing Front-end web Applications and
-        RESTfull API's. I'm a quick learner and collaborate closely with clients
-        to create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
-      </motion.div>
-      <div className="mt-20 flex flex-wrap gap-10 justify-evenly">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-6 text-gray-300 text-lg max-w-3xl mx-auto md:mx-0 leading-relaxed text-center md:text-left"
+        >
+          I'm a skilled software developer with experience in TypeScript and
+          JavaScript, and expertise in frameworks like React, Node.js, and
+          Three.js. I'm a quick learner and collaborate closely with clients to
+          create efficient, scalable, and user-friendly solutions that solve
+          real-world problems. Let's work together to bring your ideas to life!
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+        >
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} index={index} {...service} />
+          ))}
+        </motion.div>
       </div>
-    </>
+    </div>
   );
 };
 
