@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Bubble from "./Bubble BTN/Bubble";
 import manImage from "../Assets/man.png";
 
-const name: string[] = ["N", "A", "N", "D", "A", " ", "K", "U", "M", "A", "R", " ", "C", "H", "I", "N", "N", "A", "S", "A", "M", "Y"];
+const name: string[] = ["N", "A", "N", "D", "A", " ", "K", "U", "M", "A", "R", " ", " ", " ", "C", "H", "I", "N", "N", "A", "S", "A", "M", "Y"];
 
 const Hero = () => {
   return (
@@ -19,10 +19,6 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="flex flex-col gap-8 relative"
           >
-            <div className="absolute left-0 top-0 hidden md:flex flex-col items-center">
-              <div className="w-5 h-5 rounded-full bg-[#2563eb] shadow-lg" />
-              <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-[#2563eb] to-transparent" />
-            </div>
             <div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -33,7 +29,7 @@ const Hero = () => {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
+                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight"
                 >
                   Hi, I'm
                 </motion.h1>
@@ -54,7 +50,7 @@ const Hero = () => {
                           color: "#4dba87",
                           transition: { duration: 0.2 }
                         }}
-                        className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mr-0.5 md:mr-1
+                        className="text-xl sm:text-2xl md:text-4xl font-bold text-white mr-0.5 md:mr-1
                                  cursor-default"
                       >
                         {letter}
@@ -97,8 +93,8 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.95, x: 20 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="flex-1 relative h-[250px] sm:h-[350px] md:h-[500px] w-full max-w-[400px] sm:max-w-[500px] mx-auto md:mx-0 overflow-hidden
-                    rounded-lg md:rounded-xl group mt-4 md:mt-16"
+          className="flex-1 relative h-[320px] sm:h-[450px] md:h-[550px] w-full max-w-[320px] sm:max-w-[450px] md:max-w-[550px] mx-auto md:mx-0 overflow-hidden
+                    rounded-lg md:rounded-xl group mt-4 md:mt-16 bg-[#1a1a1a]/30"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#2563eb]/20 to-transparent z-10
                         group-hover:from-[#2563eb]/30 transition-all duration-700" />
@@ -108,10 +104,11 @@ const Hero = () => {
           <img
             src={manImage}
             alt="Developer"
-            className="absolute inset-0 w-full h-full object-cover
-                     shadow-[0_0_20px_rgba(37,99,235,0.2)]
-                     group-hover:scale-105 transition-all duration-700 ease-out
-                     group-hover:shadow-[0_0_30px_rgba(37,99,235,0.3)]"
+            className="absolute inset-0 w-full h-full object-contain object-center
+                     shadow-[0_0_20px_rgba(37,99,235,0)]
+                     group-hover:scale-102 transition-all duration-700 ease-out
+                     group-hover:shadow-[0_0_30px_rgba(37,99,235,0.1)]
+                     p-2"
           />
         </motion.div>
       </div>

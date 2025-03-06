@@ -41,7 +41,7 @@ const ServiceCard = ({ index, title, icon }: any) => (
 const About = () => {
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
-      <div className="absolute inset-0 max-w-7xl mx-auto px-4 sm:px-8 md:px-16 py-10 md:py-16">
+      <div className="absolute inset-0 w-full mx-auto px-4 sm:px-8 md:px-12 py-10 md:py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,13 +58,14 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-6 text-gray-300 text-lg max-w-3xl mx-auto md:mx-0 leading-relaxed text-center md:text-left"
+          className="mt-6 text-gray-300 text-lg w-full mx-auto md:mx-0 leading-relaxed text-center md:text-left"
         >
-          I'm a skilled software developer with experience in TypeScript and
-          JavaScript, and expertise in frameworks like React, Node.js, and
-          Three.js. I'm a quick learner and collaborate closely with clients to
-          create efficient, scalable, and user-friendly solutions that solve
-          real-world problems. Let's work together to bring your ideas to life!
+          I'm a skilled software developer with experience in{" "}
+          <span className="text-[#4dba87]">TypeScript</span> and{" "}
+          <span className="text-[#4dba87]">JavaScript</span>, and expertise in frameworks like{" "}
+          <span className="text-[#4dba87]">React</span>,{" "}
+          <span className="text-[#4dba87]">Node.js</span>, and{" "}
+          <span className="text-[#4dba87]">Three.js</span>. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
         </motion.p>
 
         <motion.div

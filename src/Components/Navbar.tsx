@@ -61,7 +61,14 @@ const Navbar = () => {
               } font-medium  p-3   hover:text-[white]`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a
+                href={`#${link.id}`}
+                onClick={() => {
+                  setActive(link.title);
+                  const element = document.getElementById(link.id);
+                  element?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+              >{link.title}</a>
             </motion.li>
           ))}
         </ul>
@@ -90,7 +97,15 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a
+                    href={`#${nav.id}`}
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setActive(nav.title);
+                      const element = document.getElementById(nav.id);
+                      element?.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }}
+                  >{nav.title}</a>
                 </li>
               ))}
             </ul>

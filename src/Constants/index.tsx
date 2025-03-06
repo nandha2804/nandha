@@ -159,7 +159,7 @@ const experiences = [
     company_name: "Grid R&D (Bangalore) Private Limited",
     icon: active,
     iconBg: "#ffff",
-    date: "{ OCT 2024 - Present }",
+    date: "{ OCT 2024 - JAN 2025 }",
     points: [
       "Developed and enhanced the Job Portal application using Python, Django, and React implementing key features and optimizations.",
       "Integrated automated email notifications for new user registrations, job applications, profile- matched job alerts, and employer - jobseeker inbox messages.",
