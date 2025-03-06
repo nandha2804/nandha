@@ -1,6 +1,6 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { styles } from "../style";
 import { github } from "../Assets";
 import { projects } from "../Constants";
@@ -12,10 +12,22 @@ import {
   titleChild,
   titleFadeIn,
 } from "../Utils/Motion";
-// import Fade from "react-reveal";
-import Zoom from "react-reveal/Zoom";
 
-const ProjectCard = ({
+interface Tag {
+  name: string;
+  color: string;
+}
+
+interface ProjectCardProps {
+  index: number;
+  name: string;
+  description: string;
+  tags: Tag[];
+  image: string;
+  source_code_link: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
   index,
   name,
   description,
@@ -36,7 +48,7 @@ const ProjectCard = ({
         glareBorderRadius={"14px"}
         glarePosition={"all"}
         glareMaxOpacity={0.2}
-        className="bg-tertiary p-5  rounded-2xl sm:w-[360px] w-full h-[34rem] flex flex-col justify-between"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-[34rem] flex flex-col justify-between"
         style={{ border: "#4dba87 2px solid" }}
       >
         <div className="relative w-full h-[170px]">
@@ -81,18 +93,30 @@ const ProjectCard = ({
   );
 };
 
-const Works = () => {
+const Works: React.FC = () => {
   const subText = ["<", "M", "y", " ", "w", "o", "r", "k", " ", "/", ">"];
   const title = ["P", "r", "o", "j", "e", "c", "t", "s"];
   const p = "< MY WORK />";
+
   return (
     <>
-      <Zoom top cascade duration={1500}>
-        <p className="text-[#4dba87] font-medium text-lg sm:text-xl mb-2">{p}</p>
-      </Zoom>
-      <Zoom top cascade duration={1500}>
-        <h2 className={styles.sectionHeadText}>Projects</h2>
-      </Zoom>
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-[#4dba87] font-medium text-lg sm:text-xl mb-2"
+      >
+        {p}
+      </motion.p>
+      
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        className={styles.sectionHeadText}
+      >
+        Projects
+      </motion.h2>
 
       <motion.div
         variants={desc}

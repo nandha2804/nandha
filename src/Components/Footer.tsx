@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { styles } from "../style";
 import { Link } from "react-router-dom";
 import { footerLinks } from "../Constants";
 import { menu, close } from "../Assets";
 import { motion } from "framer-motion";
-import Bounce from "react-reveal/Bounce";
 
 const Footer = () => {
   const [active, setActive] = useState("");
@@ -32,9 +31,12 @@ const Footer = () => {
               window.scrollTo(0, 0);
             }}
           >
-            <img className={`${styles.navText}`} style={{ color: "#4dba87" }}>
-               
-            </img>
+            <p className={`${styles.navText}`} style={{ color: "#4dba87" }}>
+              {R}
+              <span className="text-white text-[1rem] xxs:text[4rem]">
+                {name}
+              </span>
+            </p>
           </Link>
         </div>
         <ul className="sm:flex flex gap-2 list-none ">

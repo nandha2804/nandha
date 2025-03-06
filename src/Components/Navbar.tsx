@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { styles } from "../style";
 import { Link } from "react-router-dom";
 import { navLinks } from "../Constants";
 import { menu, close } from "../Assets";
 import { motion } from "framer-motion";
-import Bounce from "react-reveal/Bounce";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
