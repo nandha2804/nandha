@@ -7,7 +7,6 @@ import {
   html,
   css,
   reactjs,
-  Angular,
   github,
   aws,
   django,

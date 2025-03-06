@@ -6,12 +6,12 @@ const ComputersCanvas = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width:450px)");
     setIsMobile(mediaQuery.matches);
-    const handleMediaQueryChange = (event) => {
+    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
       setIsMobile(event.matches);
     };
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    mediaQuery.addListener(handleMediaQueryChange);
     return () => {
-      removeEventListener("change", handleMediaQueryChange);
+      mediaQuery.removeListener(handleMediaQueryChange);
     };
   }, []);
   return (

@@ -138,7 +138,7 @@ export const desc = {
   },
 };
 
-export const staggerContainer = (staggerChildren, delayChildren) => {
+export const staggerContainer = (staggerChildren: number, delayChildren?: number) => {
   return {
     hidden: {},
     show: {
