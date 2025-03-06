@@ -48,7 +48,7 @@ const About = () => {
         className="w-full text-center mb-6 sm:mb-8"
       >
         <p className="text-[#4dba87] font-medium text-base sm:text-lg mb-2">Introduction</p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-white">Overview.</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-white">About Me</h2>
       </motion.div>
 
       <motion.p
@@ -58,12 +58,11 @@ const About = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="text-base sm:text-lg text-gray-300 w-full mb-8 sm:mb-12 leading-relaxed text-justify"
       >
-        I'm a skilled software developer with experience in{" "}
-        <span className="text-[#4dba87]">TypeScript</span> and{" "}
-        <span className="text-[#4dba87]">JavaScript</span>, and expertise in frameworks like{" "}
-        <span className="text-[#4dba87]">React</span>,{" "}
-        <span className="text-[#4dba87]">Node.js</span>, and{" "}
-        <span className="text-[#4dba87]">Three.js</span>. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
+        I'm a passionate Software Developer with hands-on experience in{" "}
+        <span className="text-[#4dba87]">Python (Django), REST APIs, JavaScript</span> and{" "}
+        <span className="text-[#4dba87]">Typescript</span>. I specialize in building efficient, scalable, and user-friendly applications using modern frameworks like{" "}
+        <span className="text-[#4dba87]"> React.js, Node.js</span>, and{" "}
+        <span className="text-[#4dba87]">Django</span>. With a knack for quick learning and problem-solving, I thrive in collaborative environments where I can turn ideas into reality. I love working closely with clients to deliver real-world solutions that not only meet requirements but also enhance user experiences.
       </motion.p>
 
       <motion.div

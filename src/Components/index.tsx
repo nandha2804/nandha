@@ -8,6 +8,7 @@ import Experience from "./Experience";
 import Works from "./Works";
 import Contact from "./Contact";
 import DebugWrapper from "./DebugWrapper";
+import BubblesBackground from "./BubblesBackground";
 
 export {
   Hero,
@@ -18,8 +19,9 @@ export {
   Experience,
   Works,
   Contact,
-  EarthCanvas, 
-  ComputersCanvas, 
+  EarthCanvas,
+  ComputersCanvas,
   StarsCanvas,
-  DebugWrapper
+  DebugWrapper,
+  BubblesBackground
 };

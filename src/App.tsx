@@ -10,6 +10,7 @@ import {
   Contact,
   Navbar,
   Footer,
+  BubblesBackground,
 } from "./Components";
 import Statics from "./Components/GithunStatics/Statics";
 
@@ -39,6 +40,7 @@ function App() {
   return (
     <Router>
       <div className="relative bg-primary">
+        <BubblesBackground />
         {/* Fixed Navbar */}
         <div className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm">
           <Navbar />

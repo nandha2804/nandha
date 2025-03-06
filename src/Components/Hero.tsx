@@ -83,13 +83,30 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.6 }}
             className="flex items-center justify-center"
           >
-            <div className="w-full max-w-[400px]">
-              <img
+            <motion.div
+              className="w-full max-w-[500px] relative"
+              animate={{
+                y: [-10, 10, -10],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.3 }
+              }}
+            >
+              <motion.img
                 src={manImage}
                 alt="Developer"
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain relative z-10"
+                style={{
+                  filter: "drop-shadow(0 0 20px rgba(77, 186, 135, 0.2))"
+                }}
               />
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
